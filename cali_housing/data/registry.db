@@ -1,0 +1,58 @@
+
+Y
+9
+house_idThe ID of the house"house_idJcali_housing
+İõ·˜Ú€€İõ·˜Ú€€
+C
+#
+__dummy"
+__dummy_idJcali_housing
+İõ·˜Ú€€İõ·˜Ú€€1"$868b4822-6e80-43f6-bd56-366ae1df2498*İõ·˜ãú€2ô
+Ó
+df4_feature_viewcali_housinghouse_id"
+Latitude"
+	Longitude2€é:tevent_timestampZ../data/df4.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢../data/df4.parquet@b
+house_id
+İõ·ØŞ½€İõ·ØŞ½€2ñ
+Ğ
+df1_feature_viewcali_housinghouse_id"
+
+MedInc"
+HouseAge2€é:tevent_timestampZ../data/df1.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢../data/df1.parquet@b
+house_id
+İõ·ØŞ½€İõ·ØŞ½€2ó
+Ò
+target_feature_viewcali_housinghouse_id"
+
+target2€é:€event_timestampZ../data/target_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢../data/target_df.parquet@b
+house_id
+İõ·ØŞ½€İõ·ØŞ½€2õ
+Ô
+df3_feature_viewcali_housinghouse_id"
+
+Population"
+AveOccup2€é:tevent_timestampZ../data/df3.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢../data/df3.parquet@b
+house_id
+İõ·ØŞ½€İõ·ØŞ½€2ô
+Ó
+df2_feature_viewcali_housinghouse_id"
+AveRooms"
+	AveBedrms2€é:tevent_timestampZ../data/df2.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢../data/df2.parquet@b
+house_id
+İõ·ØŞ½€İõ·ØŞ½€RÕ
+§
+,feast.infra.online_stores.sqlite.SqliteTable"w
+VD:\Projects\feast-california-housing\cali_housing\feature_repo\..\data\online_store.dbcali_housing_df1_feature_view
+§
+,feast.infra.online_stores.sqlite.SqliteTable"w
+VD:\Projects\feast-california-housing\cali_housing\feature_repo\..\data\online_store.dbcali_housing_df2_feature_view
+§
+,feast.infra.online_stores.sqlite.SqliteTable"w
+VD:\Projects\feast-california-housing\cali_housing\feature_repo\..\data\online_store.dbcali_housing_df3_feature_view
+§
+,feast.infra.online_stores.sqlite.SqliteTable"w
+VD:\Projects\feast-california-housing\cali_housing\feature_repo\..\data\online_store.dbcali_housing_df4_feature_view
+ª
+,feast.infra.online_stores.sqlite.SqliteTable"z
+VD:\Projects\feast-california-housing\cali_housing\feature_repo\..\data\online_store.db cali_housing_target_feature_viewbƒevent_timestampZ../data/df4.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢../data/df4.parquetªcali_housingbƒevent_timestampZ../data/df2.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢../data/df2.parquetªcali_housingbevent_timestampZ../data/target_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢../data/target_df.parquetªcali_housingbƒevent_timestampZ../data/df3.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢../data/df3.parquetªcali_housingbƒevent_timestampZ../data/df1.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢../data/df1.parquetªcali_housingz4
+cali_housing$2f3d43d9-7557-4a33-b0a4-8171e068c203
