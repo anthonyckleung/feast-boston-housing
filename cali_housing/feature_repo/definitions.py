@@ -1,5 +1,6 @@
-from google.protobuf.duration_pb2 import Duration 
-from feast import Entity, Feature, FeatureView, FileSource, ValueType
+from datetime import timedelta
+from feast import Entity, FeatureView, FileSource, ValueType,  Field
+from feast.types import Float32, Float64, Int64
 
 # Declaring an entity for the dataset
 house = Entity(
@@ -14,20 +15,20 @@ house = Entity(
 
 # Declaring the source of the first set of features
 file_source1 = FileSource(
-    path = "./data/df1.parquet",
+    path = "../data/df1.parquet",
     event_timestamp_column="event_timestamp"
 )
 
 # Defining the first set of features
 df1_fv = FeatureView(
     name="df1_feature_view",
-    ttl=Duration(seconds=86400 * 3),  # i.e., 3 days
-    entities = ['house_id'],
-    features = [
-        Feature(name="MedInc", dtype=ValueType.FLOAT),
-        Feature(name="HouseAge", dtype=ValueType.INT64)
+    ttl=timedelta(days=3),  # i.e., 3 days
+    entities = [house],
+    schema = [
+        Field(name="MedInc", dtype=Float32),
+        Field(name="HouseAge", dtype=Int64)
     ],
-    batch_source = file_source1
+    source = file_source1
 )
 
 
@@ -38,20 +39,20 @@ df1_fv = FeatureView(
 
 # Declaring the source of the second set of features
 file_source2 = FileSource(
-    path = "./data/df2.parquet",
+    path = "../data/df2.parquet",
     event_timestamp_column="event_timestamp"
 )
 
 # Defining the first set of features
 df2_fv = FeatureView(
     name="df2_feature_view",
-    ttl=Duration(seconds=86400 * 3),
-    entities = ['house_id'],
-    features = [
-        Feature(name="AveRooms", dtype=ValueType.FLOAT),
-        Feature(name="AveBedrms", dtype=ValueType.FLOAT)
+    ttl=timedelta(days=3),
+    entities = [house],
+    schema = [
+        Field(name="AveRooms", dtype=Float32),
+        Field(name="AveBedrms", dtype=Float32)
     ],
-    batch_source = file_source2
+    source = file_source2
 )
 
 
@@ -62,20 +63,20 @@ df2_fv = FeatureView(
 
 # Declaring the source of the third set of features
 file_source3 = FileSource(
-    path = "./data/df3.parquet",
+    path = "../data/df3.parquet",
     event_timestamp_column="event_timestamp"
 )
 
 # Defining the first set of features
 df3_fv = FeatureView(
     name="df3_feature_view",
-    ttl=Duration(seconds=86400 * 3),
-    entities = ['house_id'],
-    features = [
-        Feature(name="Population", dtype=ValueType.INT64),
-        Feature(name="AveOccup", dtype=ValueType.FLOAT)
+    ttl=timedelta(days=3),
+    entities = [house],
+    schema = [
+        Field(name="Population", dtype=Int64),
+        Field(name="AveOccup", dtype=Float32)
     ],
-    batch_source = file_source3
+    source = file_source3
 )
 
 
@@ -85,20 +86,20 @@ df3_fv = FeatureView(
 
 # Declaring the source of the fourth set of features
 file_source4 = FileSource(
-    path = "./data/df4.parquet",
+    path = "../data/df4.parquet",
     event_timestamp_column="event_timestamp"
 )
 
 # Defining the first set of features
 df4_fv = FeatureView(
     name="df4_feature_view",
-    ttl=Duration(seconds=86400 * 3),
-    entities = ['house_id'],
-    features = [
-        Feature(name="Latitude", dtype=ValueType.INT64),
-        Feature(name="Longitude", dtype=ValueType.FLOAT)
+    ttl=timedelta(days=3),
+    entities = [house],
+    schema = [
+        Field(name="Latitude", dtype=Int64),
+        Field(name="Longitude", dtype=Float32)
     ],
-    batch_source = file_source4
+    source = file_source4
 )
 
 ############
@@ -107,17 +108,17 @@ df4_fv = FeatureView(
 
 # Declaring the source of the fourth set of features
 target_source = FileSource(
-    path = "./data/target_df.parquet",
+    path = "../data/target_df.parquet",
     event_timestamp_column="event_timestamp"
 )
 
 # Defining the first set of features
-df4_fv = FeatureView(
+target_fv = FeatureView(
     name="target_feature_view",
-    ttl=Duration(seconds=86400 * 3),
-    entities = ['house_id'],
-    features = [
-        Feature(name="target", dtype=ValueType.FLOAT)
+    ttl=timedelta(days=3),
+    entities = [house],
+    schema = [
+        Field(name="target", dtype=Float32)
     ],
-    batch_source = target_source
+    source = target_source
 )

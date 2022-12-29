@@ -1,6 +1,6 @@
 project: cali_housing
-registry: data/registry.db
+registry: ../data/registry.db
 provider: local
 online_store:
-    path: data/online_store.db
+    path: ../data/online_store.db
 entity_key_serialization_version: 2
